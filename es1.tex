@@ -2,23 +2,29 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[italian]{babel}
+%\usepackage[italian]{babel}
 \usepackage{hyperref}%
 \usepackage{mathrsfs}
 
-
-
 \begin{document}
-
 
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
 \section*{}
-Given a set of $n$ points $\{(x_1, y_1), ..., (x_n, y_n)\}$, parametric and non parametric methods are used to find a function $f$ to fit the given data. \newline
-Parametric methods assume the form of the function and we compute the parameters. With non parametric methods we don't make any assumptions but we try to find the form of true function directly. \newline
-Parametric methods are simple but inflexible because we fix the number of parameters beforehand. While non-parametric methods are more flexible at the cost of a higher complexity. \newline
-With small datasets parametric methods are preferred because their simplicity makes them less sensitive to over-fitting while non-parametric methods are more suitable for big datasets.
 
+Given a set of $n$ points $\{(x_1, y_1), ..., (x_n, y_n)\}$,
+parametric and non parametric methods are used to find a function $f$ to fit the given data,
+such that for any pair $(X,Y)$, we get $Y = f(X)$. \newline
+
+Parametric methods are simple but inflexible because the number of parameters is decided beforehand.
+Nonparametric methods instead are more flexible at the cost of a higher complexity. \newline
+
+Parametric methods assume the functional form and only the parameters are to be computed.
+With nonparametric methods we try to find the true function directly, having to learn the form as well as the parameters. \newline
+
+With small datasets parametric methods are preferred
+because their simplicity makes them less sensitive to overfitting,
+while nonparametric methods are more suitable for big datasets.
 
 \end{document}
