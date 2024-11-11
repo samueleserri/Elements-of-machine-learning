@@ -2,21 +2,25 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[italian]{babel}
+%\usepackage[italian]{babel}
 \usepackage{hyperref}%
 \usepackage{mathrsfs}
 
-
-
 \begin{document}
-
 
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
 \section*{}
-In the first scenario we may have under-fitting because we are ignoring other predictors that might have a significant impact on the house price. Therefore the bias will be high and 
-In the second scenario is prone to over-fitting because it uses too many predictors with a small dataset ($n = 50$), therefore the model will have low bias and high variance. \newline
 
+In the first scenario we expect high bias and low variance (underfitting)
+because we are ignoring other predictors that might have a significant impact on the house price.
+
+From the second scenario we expect high variance and low bias (overfitting)
+because we use a flexible model with a high number of parameters and few data points.
+There is not enough information to accurately estimate this amount of parameters.
+
+In the third scenario we expect an optimal balance between bias and variance
+because all important predictors are used and the dataset is big enough to compute an accurate estimate.
 
 \end{document}
