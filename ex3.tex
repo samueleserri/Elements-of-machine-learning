@@ -44,9 +44,9 @@ To find the optimal parameters we compute $\nabla_{\hat\beta}$ and set it to 0.
     \partial_{\hat\beta_1}RSS = 2\sum_{i = 1}^{5}x_{i,2}(X_{(i)}\hat\beta - y_i)
 \end{equation*}
 \begin{equation*}
-    \partial_{\hat\beta_1}RSS = 2\sum_{i = 1}^{5}x_{i,3}(X_{(i)}\hat\beta - y_i)
+    \partial_{\hat\beta_2}RSS = 2\sum_{i = 1}^{5}x_{i,3}(X_{(i)}\hat\beta - y_i)
 \end{equation*}
-This leads to the system: \begin{equation*}
+$\nabla_{\hat\beta} = 0$ leads to the system: \begin{equation*}
     \begin{pmatrix}
         5 & 15 & 11 \\ 15 & 55 & 36 \\ 11 & 36 & 27
     \end{pmatrix}\begin{pmatrix}
@@ -57,5 +57,12 @@ This leads to the system: \begin{equation*}
 \end{equation*}
 With solution $\begin{pmatrix}
     156/95 \\ 169/95 \\ 14/19
-\end{pmatrix}$
+\end{pmatrix}$ 
+\section*{}
+To compute $R^2$ we use the formula: \begin{equation*}
+    R^2 = 1 - \frac{\sum_{i}^{5}e_i^2}{\sum_i^5 (y_i - \overline{y})^2}
+\end{equation*}
+\begin{equation*}
+    R^2 = 1  - \frac{\|X\hat\beta - y\|_2^2}{\|X\hat\beta - mean(y)\|_2^2} \approx 0.9359
+\end{equation*}
 \end{document}
