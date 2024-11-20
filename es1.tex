@@ -2,17 +2,31 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage[italian]{babel}
 \usepackage{hyperref}%
 \usepackage{mathrsfs}
 
+
+
 \begin{document}
+
 
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
-\section*{}
-
-
-
+\section*{a)}
+In logistic regression model the function:
+\begin{equation*}
+    Y = \frac{e^{f(x)}}{1 + e^{f(x)}}
+\end{equation*}
+it is used for mapping the linear predictor $f(x)$ into $[0, 1]$ so the output can be interpreted as a probability.
+\section{b)}
+\begin{equation*}
+    p(y_1, ..., y_n| \beta_0, \beta_1, ...,\beta_n, x_1, ..., x_n) = \prod_{i : y_i= 1}^n \frac{e^{f(x_i)}}{1 + e^{f(x_i)}}\prod_{i : y_i = 0}^n 1 - \frac{e^{f(x_i)}}{1 + e^{f(x_i)}}
+\end{equation*}
+If we take the logarithm: \begin{equation*}
+    \sum_{i: y_i = 1}^n{log\bigg(\frac{e^{f(x_i)}}{1 + e^{f(x_i)}}\bigg)} + \sum_{i:y_i = 0}^nlog\bigg( 1 - \frac{e^{f(x_i)}}{1 + e^{f(x_i)}}\bigg) = 
+\end{equation*}
+\begin{equation*}
+    =  \sum_{i: y_i = 1}^n f(x_i) -  \sum_{i: y_i = 1}^nlog(1 + e^{f(x_i)}) - \sum_{i:y_i = 0}^nlog(1 + e^{f(x_i)})
+\end{equation*}
 \end{document}
