@@ -29,4 +29,8 @@ If we take the logarithm: \begin{equation*}
 \begin{equation*}
     =  \sum_{i: y_i = 1}^n f(x_i) -  \sum_{i: y_i = 1}^nlog(1 + e^{f(x_i)}) - \sum_{i:y_i = 0}^nlog(1 + e^{f(x_i)})
 \end{equation*}
+In order to estimate the parameters of the model we need to find the maximum of the likelihood function. Finding the maximum of the log-likelihood function is equivalent because the logarithmic transformation is monotonic and preserves maximums.
+\section*{c)}
+For classification problems discriminative models return a function that defines strict boundaries between the classes. Whereas generative models return the probability $p_g(x)$ of $x$ to belonging in the class $g$ for each class $g \in G$ . \newline
+Generative models estimates their parameters maximizing a likelihood function while discriminative models minimize a loss function. 
 \end{document}
