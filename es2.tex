@@ -2,17 +2,54 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage[italian]{babel}
+\usepackage[italian]{babel}
 \usepackage{hyperref}%
 \usepackage{mathrsfs}
 
+
+
 \begin{document}
+
 
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
-\section*{}
-
-
-
+\section*{a)}
+Given: 
+\begin{equation*}
+    l(\beta) = \sum_{i = 1}^ny_i\log\Big(\frac{e^{f(x_i;\beta)}}{1 + e^{f(x_i;\beta)}}\Big) + (1 - y_i)log\Big(1 - \frac{e^{f(x_i;\beta)}}{1 + e^{f(x_i;\beta)}}\Big)
+\end{equation*}
+We compute $\nabla_\beta l(\beta)$ as:
+\begin{equation*}
+    \nabla_\beta l(\beta) = \nabla_\beta\sum_{i = 1}^ny_i\Big[f({x_i;\beta) - log(1 + e^{f(x_i;\beta)})}\Big] + (1 - y_i)(-log(1 + e^{f(x_i;\beta)})) = 
+\end{equation*}
+\begin{equation*}
+    = \nabla_\beta\sum_{i = 1}^ny_i f(x_i;\beta) - y_i log(1 + e^{f(x_i;\beta)}) + y_i log(1 + e^{f(x_i;\beta)}) - log(1 + e^{f(x_i;\beta)}) = 
+\end{equation*}
+\begin{equation*}
+    = \nabla_\beta\sum_{i = 1}^n y_i f(x_i; \beta) - log( 1 + e^{f(x_i;\beta)}) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{i = 1}^n y_i\nabla_\beta f(x_i; \beta) - \frac{e^{f(x_i;\beta)}\nabla_\beta f(x_i; \beta)}{1 + e^{f(x_i;\beta)}}
+\end{equation*}
+if $f(x_i; \beta) = \beta_0 + x_{i1}\beta_1 + x_{i2}\beta_2$ then:
+\begin{equation*}
+    \nabla_\beta f(x_i; \beta) = \begin{pmatrix}
+        1 \\ x_{i1} \\ x_{i2}
+    \end{pmatrix}
+\end{equation*}
+and 
+\begin{equation*}
+    \nabla_\beta l(\beta) =  \begin{pmatrix}
+        \partial_{\beta_0}l(\beta) \\
+        \partial_{\beta_1}l(\beta) \\
+        \partial_{\beta_2}l(\beta) \\
+    \end{pmatrix}= \begin{pmatrix}
+        \sum_{i = 1}^n y_i - \frac{e^{f(x_i;\beta)}}{1 + e^{f(x_i;\beta)}} \\
+        \sum_{i = 1}^n y_i x_{i1} - \frac{e^{f(x_i;\beta)}x_{i1}}{1 + e^{f(x_i;\beta)}} \\
+        \sum_{i = 1}^n y_i x_{i2} - \frac{e^{f(x_i;\beta)}x_{i2}}{1 + e^{f(x_i;\beta)}} 
+    \end{pmatrix}
+\end{equation*}
+\section*{b)}
+\section*{c)}
 \end{document}
