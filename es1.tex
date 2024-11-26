@@ -14,12 +14,12 @@
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
 \section*{a)}
-In logistic regression model the function:
+In a logistic regression model, the function:
 \begin{equation*}
     Y = \frac{e^{f(x)}}{1 + e^{f(x)}}
 \end{equation*}
 it is used for mapping the linear predictor $f(x)$ into $[0, 1]$ so the output can be interpreted as a probability.
-\section{b)}
+\section*{b)}
 \begin{equation*}
     p(y_1, ..., y_n| \beta_0, \beta_1, ...,\beta_n, x_1, ..., x_n) = \prod_{i : y_i= 1}^n \frac{e^{f(x_i)}}{1 + e^{f(x_i)}}\prod_{i : y_i = 0}^n 1 - \frac{e^{f(x_i)}}{1 + e^{f(x_i)}}
 \end{equation*}
@@ -31,6 +31,6 @@ If we take the logarithm: \begin{equation*}
 \end{equation*}
 In order to estimate the parameters of the model we need to find the maximum of the likelihood function. Finding the maximum of the log-likelihood function is equivalent because the logarithmic transformation is monotonic and preserves maximums.
 \section*{c)}
-For classification problems discriminative models return a function that defines strict boundaries between the classes. Whereas generative models return the probability $p_g(x)$ of $x$ to belonging in the class $g$ for each class $g \in G$ . \newline
-Generative models estimates their parameters maximizing a likelihood function while discriminative models minimize a loss function. 
+For classification problems discriminative models return a function that defines strict boundaries between the classes. Whereas generative models return the probability ( $p_g(x)$ ) of $x$ belonging in the class $g$ for each class $g \in G$. \newline
+Generative models estimate their parameters by maximizing a likelihood function while discriminative models minimize a loss function. 
 \end{document}
