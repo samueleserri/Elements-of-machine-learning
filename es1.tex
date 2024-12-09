@@ -12,17 +12,13 @@
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
 \section*{}
-
-1. ?? it doesn't make sense because set validation leads to an overestimation of the test error.
-
-2. 
-
-3. LOOCV gives approximately unbiased predictions of the test error because each model uses almost the full data set,
+\begin{enumerate}
+    \item 
+It doesn't make sense because the validation set is small and the estimate of the test error using such a small validation set is highly variable.
+    \item
+It is possible to overfit if we have a small dataset and we use LOOCV.
+    \item
+LOOCV gives approximately unbiased predictions of the test error because each model uses almost the full data set,
 k-fold uses a smaller set to train the models, but still leads to preditions with an intermediate level of bias (higher than LOOCV but much lower than set validation)
-
-
-bruttacopia
-the models fitted with LOOCV are very similar and highly correlated with eachother, whereas k-fold CV results in much more varied preditions.
-therefore test error estimates resulting from LOOCV have much higher variance than k-fold CV
-
+\end{enumerate}
 \end{document}
