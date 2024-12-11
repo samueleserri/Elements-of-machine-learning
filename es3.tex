@@ -11,7 +11,7 @@
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
-\section*{}
+\section*{1}
 \section*{a)}
 $f_1(x) = a_1 + b_1x + c_1x^2 + d_1x^3 \  \ x\leq\xi$ \newline
 if $x \leq \xi$ then $(x - \xi)_{+}^3 = 0$ by definition, so we can simply set: \newline
@@ -34,4 +34,10 @@ $\lim\limits_{x \xrightarrow{}\xi}f_2^{'}(x) = \beta_1 + 3\beta_4\xi^2 + 2\xi(\b
  \section*{e)}
 $f_1^{''}(x) = 2\beta_2 + 6\beta_3x$ and \\ $f_2^{''}(x) = 2(\beta_2 - 3\beta_4\xi) + 6x(\beta_3 + \beta_4)$\vspace{0.3 cm}\newline
 $\lim\limits_{x \xrightarrow{}\xi}f_2^{''}(x) =  2(\beta_2 - 3\beta_4\xi) + 6\xi(\beta_3 + \beta_4) = 2\beta_2 + 6\beta_3\xi = \lim\limits_{x \xrightarrow{}\xi}f_1^{''}(x)$
+\section*{2}
+
+% not sure of a and b
+\section*{a)} $\hat{g_1}$ will have smaller training RSS because is less regular than $\hat{g_1}$ and will fit the training data better (i.e. small bias).
+\section*{b)} $\hat{g_2}$ will have smaller test RSS because is more regular and less sensitive to over-fitting.
+\section*{c)} For $\lambda = 0$ $\hat{g}_1 = \hat{g}_2$ and RSS on train is equal to zero because the function $g$ will be an interpolation function of the given points.
 \end{document} 
