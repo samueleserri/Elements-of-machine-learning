@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage[italian]{babel}
+\usepackage{hyperref}%
+\usepackage{mathrsfs}
+
+\begin{document}
+
+\section*{}
+Marco Reina 7066486 \newline
+Samuele Serri 7069839 \newline
+\section*{}
+\begin{enumerate}
+    \item 
+It doesn't make sense because the validation set is small and the estimate of the test error using such a small validation set is highly variable.
+    \item
+It is possible to overfit if we have a small dataset and we use LOOCV.
+    \item
+LOOCV gives approximately unbiased predictions of the test error because each model uses almost the full data set,
+k-fold uses a smaller set to train the models, but still leads to preditions with an intermediate level of bias (higher than LOOCV but much lower than set validation)
+\end{enumerate}
+\end{document}

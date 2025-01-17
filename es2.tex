@@ -7,45 +7,12 @@
 \usepackage{mathrsfs}
 
 \begin{document}
+
 \section*{}
 Marco Reina 7066486 \newline
 Samuele Serri 7069839 \newline
-\begin{enumerate}
-    \item
-
-
-% es 1
-\section*{a)}
-if $\lambda\xrightarrow{}0$ then the solution of (2.1) and (2.2) will be the same as minimizing RSS. \newline
-if $\lambda \xrightarrow{}\infty$ then the coefficients $\beta_j$ for $j = 1,...,p$ will be close to zero.
-\section*{b)}
-Lasso regularization has the property of setting some coefficients exactly to zero with a $\lambda$ large enough, therefore if our goal is to do variable selection we should use $L_1$ regularization.  
-
-
-% es 2
-
-
-
-\item
-\section*{a)}
-\begin{equation*}
-    f(Y| X, \beta) = \prod_{i  =1}^n\frac{1}{\sqrt{2\pi\sigma^2}}\exp\bigg(-\frac{|x_i|}{\sigma_2}\bigg)
-\end{equation*}
-\section*{b)}
-\begin{equation*}
-    p(\beta) = \prod_{j = 1}^{p}\frac{1}{2b}\exp\bigg(-\frac{|\beta_j|}{b}\bigg)
-\end{equation*}
-The posterior distribution takes the form: \begin{equation*}
-    p(\beta| X, Y) \propto f(Y| X, \beta)p(\beta|X) = f(Y|X,\beta)p(\beta) \hspace{0.3 cm} [1]
-\end{equation*}
-\begin{equation*}
-    p(\beta| X, Y) = \prod_{i  =1}^n\frac{1}{\sqrt{2\pi\sigma^2}}\exp\bigg(-\frac{|x_i|}{\sigma_2}\bigg)\prod_{j = 1}^{p}\frac{1}{2b}\exp\bigg(-\frac{|\beta_j|}{b}\bigg) = 
-\end{equation*}
-\begin{equation*}
-    = \prod_{i = 1}^n\prod_{j  =1}^p\frac{1}{\sqrt{2\pi\sigma^2}2b}\exp\bigg(\frac{-|x_i|}{\sigma^2} + \frac{-|\beta_j|}{b}\bigg)
-\end{equation*}
-\section*{c)}
-\end{enumerate}
 \section*{}
-$[1]$ The formula for the posterior distribution was taken from the book \textit{James, G., Witten, D., Hastie, T., \& Tibshirani, R. (2013). An introduction to statistical learning} p. 251
+
+
+
 \end{document}
